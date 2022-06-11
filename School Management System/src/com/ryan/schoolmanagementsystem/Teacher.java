@@ -33,6 +33,8 @@ public class Teacher {
 	// Getters and Setters
 	// ************************
 	
+	//No setter for Id and Name
+	
 	/**
 	 * Getter for the Teacher's Id
 	 * @return	teacher's id
@@ -58,6 +60,15 @@ public class Teacher {
 	public int getSalary() {
 		
 		return this.salary;
+	}
+	
+	/**
+	 * Setter method to update a teacher's salary
+	 * @param salary	updated salary
+	 */
+	public void setSalary(int salary) {
+		
+		this.salary = salary;
 	}
 	
 }//Teacher Class
