@@ -11,6 +11,7 @@ public class Teacher {
 	private int teacherId;
 	private String name;
 	private int salary;
+	private int salaryEarned;
 	
 	// ************************
 	// Constructors
@@ -27,6 +28,22 @@ public class Teacher {
 		this.teacherId = id;
 		this.name = name;
 		this.salary = salary;
+		this.salaryEarned = 0;
+	}
+	
+	//*************************
+	//General Methods
+	//*************************
+	
+	/**
+	 * Adds to salayEarned
+	 * Adds to teachers salary by removing from the school total earned
+	 * @param tSalary teacher's salary that will ne paid
+	 */
+	public void recceiveSalary(int tSalary) {
+		
+		salaryEarned += tSalary;
+		School.setTotalMoneySpent(salary);
 	}
 	
 	// ************************

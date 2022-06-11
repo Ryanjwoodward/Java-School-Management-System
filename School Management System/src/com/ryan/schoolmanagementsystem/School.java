@@ -12,8 +12,8 @@ public class School {
 	
 	private ArrayList<Teacher> teachers;
 	private ArrayList<Student> students;
-	private int totalMoneyEarned;
-	private int totalMoneySpent;
+	private static int totalMoneyEarned;
+	private static int totalMoneySpent;
 	
 	
 	/**
@@ -83,8 +83,8 @@ public class School {
 	 * Setter to update the total money earned by a school
 	 * @param totalMoneyEarned
 	 */
-	public void setTotalMoneyEarned(int totalMoneyEarned) {
-		this.totalMoneyEarned += totalMoneyEarned;
+	public static void setTotalMoneyEarned(int moneyEarned) {
+		totalMoneyEarned += moneyEarned;
 	}
 
 	/**
@@ -100,9 +100,9 @@ public class School {
 	 * In this program the only expense is teacher's salaries
 	 * @param totalMoneySpent	by the school
 	 */
-	public void setTotalMoneySpent(int moneySpent) {
+	public static void setTotalMoneySpent(int smoneySpent) {
 		
-		this.totalMoneyEarned -= moneySpent;
+		totalMoneyEarned -= smoneySpent;
 	}
 	
 	
