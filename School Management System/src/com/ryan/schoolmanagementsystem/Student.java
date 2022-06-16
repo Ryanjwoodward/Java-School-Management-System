@@ -35,8 +35,22 @@ public class Student {
 		this.grade = grade;
 	}
 	
+	//***********************
+	//General Methods
+	//***********************
+
+	/**
+	 * Gets the remaining fees a student owes
+	 * @return	the amount of remaining fees a student has to pay
+	 */
+	public int getRemainingFees() {
+		
+		return feesTotal- feesPaid;
+	}
+	
 	//************************
 	//Getters and Setters
+	//************************
 	//No setters for students name or Id
 	
 	/**
@@ -56,6 +70,52 @@ public class Student {
 	public void updateFeesPaid(int fees) {
 		
 		this.feesPaid += fees;
+		
+		School.setTotalMoneyEarned(feesPaid);
 	}
+
+	//Auto-generated Getters
+	
+	/**
+	 * Getter for the ID of a student
+	 * @return	the student's ID
+	 */
+	public int getStudentId() {
+		return studentId;
+	}
+
+	/**
+	 * Getter for the name of a student
+	 * @return	the name of the student
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Getter for the grade of a student
+	 * @return
+	 */
+	public int getGrade() {
+		return grade;
+	}
+
+	/**
+	 * Getter for a student's feesPaid attribute
+	 * @return	the total fees paid
+	 */
+	public int getFeesPaid() {
+		return feesPaid;
+	}
+
+	/**
+	 * Getter for the total fees a student owes
+	 * @return the total required payments a student has
+	 */
+	public int getFeesTotal() {
+		return feesTotal;
+	}
+	
+	
 	
 }//Student Class
